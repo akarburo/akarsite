@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$@(d%hj8dbc3*#j2%^qu8ckarv4)t1c%gu2&_g@zx6@=m!kuk4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonenumber_field',
-    'services',
     'user',
     'crispy_forms',
     'akar',
@@ -130,6 +129,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
+]
+STATIC_ROOT = [
+    os.path.join(BASE_DIR, 'staticfiles')
 ]
 
 EMAIL_HOST = 'mail.akarburo.com'
