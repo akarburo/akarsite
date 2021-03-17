@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="page-wrapper2">
+    <section class="dashboard">
+        <div class="dashboard-container">
+            <h2>Kontrol Paneli , {{request.user}}</h2>
+        </div>
+    </section>
+    <section class="dashboard">
+        <div class="dashboard-buts">
+            <div class="multi-button">
+                <a href="/dboard/pd"><button class="first-btn">Fiyat Teklifi Talepleri</button></a>
+                <a href="/dboard/services"><button>Teknik Servis Talepleri</button></a>
+                <a href="/user/account"><button class="last-btn">Kullanıcı Ayarları</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="features2">
+    <div class="feature-container-form">
+            <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <button type ="submit" class="custom-btn btn-3 center"><span>Parola Değiştir</span></button>
+        </form>
+        </div>
+    </section>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+
+<div class="page-wrapper2">
+  
+    <section class="features2">
+        
+        <div class="feature-container-form">
+
+  <div class="form-custom">  
+  <h2> "{{form.created_date.value}}" / Teknik Servis Talebi</h2>
+  <hr>
+      <form method = "post" class="post-form">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <button type ="submit" class="custom-btn btn-3 center"><span>Güncelle</span></button><br><br><br>
+      </form>
+    </div>
+</div>
+</section>
+</div>
+{% endblock body %}

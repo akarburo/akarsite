@@ -1,0 +1,25 @@
+{% extends 'layout2.html' %}
+{% load static %}
+<link href="{% static 'css/jumbotron.css' %}" rel="stylesheet">
+{% load crispy_forms_tags %}
+{% block body %}
+
+<div class="jumbotron-billboard">
+  
+  <section class="headline3">
+                <img src={% static 'service.png' alt='Loogo' %} alt="headlineimg">
+            </section>
+  <div class="container">
+
+  <div class="testt">  
+      <form method = "post" class="post-form">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <button type ="submit" class="custom-btn btn-3 center"><span>Talep Oluştur</span></button><br><br><br>
+      </form>
+    </div>
+</div>
+</div>
+</section>
+{% endblock body %}

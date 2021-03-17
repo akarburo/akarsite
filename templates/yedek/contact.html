@@ -1,0 +1,29 @@
+{% extends 'layout2.html' %}
+{% load static %}
+{% block body %}
+
+<div class="jumbotron-billboard">
+  <section class="headline3">
+    <img src={% static 'contact.png' alt='Loogo' %} alt="headlineimg">
+  </section>
+  <div class="container">
+    
+    
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+    <h3>My Google Maps Demo</h3>
+    <div class="mapp">
+      <iframe width="1150" height="300" src="https://maps.google.com/maps?width=900&amp;height=440&amp;hl=en&amp;q=Akar%20B%C3%BCro%20Makinalar%C4%B1+(Akar%20B%C3%BCro%20Makinalar%C4%B1)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+      </iframe>
+      <div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+        <small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/">Embed Google Maps</a> & <a href="https://googlemapsgenerator.com">Google maps embed</a>
+        </small>
+      </div>
+      <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+    </div>
+      <br /> 
+    
+  </div>
+</div>
+
+{% endblock body %}

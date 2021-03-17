@@ -1,0 +1,62 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<!-- SERVICE REQUESTS -->
+<div class="table-grid">
+
+
+<table class="sortable">
+  <caption>YENİ! Fiyat Teklifi Talepleri</caption>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Firma</th>
+      <th scope="col">Temsilci</th>
+      <th scope="col">Tarih</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for demand in pdemands  %}
+     <tr>
+      <td data-label="id">{{demand.id}}</td>
+      <td data-label="İsim">{{demand.name}}</td>
+      <td data-label="Firma">{{demand.company_name}}</td>
+      <td data-label="Temsilci">{{demand.agent.username}}</td>
+      <td data-label="Tarih">{{demand.created_date}}</td>
+      <td><div class="multi-button"><a href="/dboard/pd/{{demand.id}}"><button class="view">Görüntüle</button></a></div></td>
+    </tr>
+    {% endfor %}
+     
+  </tbody>
+</table>
+
+<br><br><br><br><br><br><br>
+<!-- PRODUCT REQUESTS -->
+
+<table class="sortable">
+  <caption>YENİ! Teknik Servis Talepleri</caption>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Firma</th>
+      <th scope="col">Temsilci</th>
+      <th scope="col">Tarih</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for service in services  %}
+     <tr>
+      <td data-label="id">{{service.id}}</td>
+      <td data-label="Name">{{service.name}}</td>
+      <td data-label="Name">{{service.company_name}}</td>
+      <td data-label="Last Name">{{service.agent.username}}</td>
+      <td data-label="Date">{{service.created_date}}</td>
+      <td><div class="multi-button"><a href="/dboard/services/{{service.id}}"><button class="view">Görüntüle</button></a></div></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>

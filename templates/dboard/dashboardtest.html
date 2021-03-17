@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/dashboardtest.css' %}">
+</head>
+
+<body>
+  
+<h1>Random Dr Who Tabular Data</h1>
+<h2>With CSS Grid</h2>
+<div class="grid-table">
+  <div class="grid-table-row">
+    <div class="grid-table-cell">Title</div>
+    <div class="grid-table-cell">Episode Number</div>
+    <div class="grid-table-cell">Series</div>
+    <div class="grid-table-cell">Air Date</div>
+    <div class="grid-table-cell">Air Date</div>
+    <div class="grid-table-cell">Air Date</div>
+  </div>
+  {% for demand in pdemands  %}
+  <div class="grid-table-row">
+    <div class="grid-table-cell" data-title="Title">{{demand.id}}</div>
+    <div class="grid-table-cell" data-title="Number">{{demand.name}}</div>
+    <div class="grid-table-cell" data-title="Series">{{demand.company_name}}</div>
+    <div class="grid-table-cell" data-title="Air Date">{{demand.agent.username}}</div>
+    <div class="grid-table-cell" data-title="Air Date">{{demand.created_date}}</div>
+    <div class="grid-table-cell" data-title="Button"><button>test</button></div>
+    
+  </div>
+{% endfor %}
+</div>
+
+</body>
+
+
+</html>

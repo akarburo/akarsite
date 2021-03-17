@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+<br><br><br>
+<div class="page-wrapper">
+
+
+  
+    <section class="features">
+        
+        <div class="feature-container">
+        <a href="/machines"><img src={% static 'printer.jpg' %} alt="Printers"></a>
+        <h2>Yazıcılar ve Fotokopi Makinaları</h2>
+        <p>This pen contains use of flexbox for the headline and feature section! We use it in our mobile navbar and show the power of mixing css grid and flexbox.</p>
+        </div>
+        
+        <div class="feature-container"> 
+        <a href="/consumables"><img src={% static 'consumables.jpg' %} alt="Consumables"></a>
+        <h2>Sarf Malzemeleri</h2>
+        <p>While flexbox is used for the the mobile navbar, CSS grid is used for the desktop navbar showing many ways we can use both.</p>
+        </div>
+        <div class="feature-container">
+        <a href="/service"><img src={% static 'technicalservice.jpg' %} alt="Technical Service"></a>
+        <h2>Teknik Servis</h2>
+        <p>Fotokopi, fax, baskı ve printer cihazlarınızın tamir ve bakımlarında; güvenilir, hızlı ve deneyimli ekibimizle, sizlere en iyi teknik servis hizmetini vermekteyiz.</p>
+        </div>
+    </section>
+    
+</div>
+
+{% endblock body %}
+
+
+
+
+

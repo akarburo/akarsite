@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+{% block body %}
+
+<div class="page-wrapper">
+    <section class="dashboard">
+        <div class="dashboard-container">
+            <h2>Kontrol Paneli , {{request.user}}</h2>
+        </div>
+    </section>
+    <section class="dashboard">
+        <div class="dashboard-buts">
+            <div class="multi-button">
+                <a href="/dboard/pd"><button class="first-btn">Fiyat Teklifi Talepleri</button></a>
+                <a href="/dboard/services"><button>Teknik Servis Talepleri</button></a>
+                <a href="/user/account"><button class="last-btn">Kullanıcı Ayarları</button></a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include "tablesdb.html" %}
+<br><br>
+{% endblock body %}

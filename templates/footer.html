@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<script src="{% static 'js/footericons.js' %}" crossorigin="anonymous"></script> 
+  <div class="end">
+    <div class="cr"><i class="fas fa-copyright"></i>Akar Büro Makinaları 2021</div>
+    <div class="aside"><img src="{% static 'logofull.png' %}"></div>
+    <div class="item-1">
+      <a href="/productdemand"><p>Fiyat Teklifi Talep Formu</p></a>
+      <a href="/service"><p>Teknik Servis Talep Formu</p></a>
+      <a href="/about"><p>Hakkımızda</p></a>
+    </div>
+    <div class="item-2">
+      <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Atakan Sokak İnan Apt. No:37/B <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mecidiyeköy - İSTANBUL</p>
+      <p><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;0 212 356 06 60 (Pbx)</p>
+      <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;info@akarburo.com</p>
+      {% if request.user.is_authenticated %}
+        
+        
+        {% else %}
+       <p><a href="/user/login"><i class="fas fa-users-cog"></i></a></p>
+        {% endif %}
+    </div>
+  
+</div>

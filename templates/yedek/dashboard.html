@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h3>Kontrol Paneli</h3>
+<hr>
+<p>
+Hoşgeldiniz, Sayın {{request.user.first_name}} {{request.user.last_name}}
+</p>
+
+{% endblock body %}

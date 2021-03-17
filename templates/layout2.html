@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+    
+        <div>  
+            {% include "includes/navbar.html" %} 
+            
+            {% block body %}    
+            {% endblock body %}
+            
+        </div>
+        
+       
+    </body>
+
+   <link rel="stylesheet" href="{% static 'css/newnavbar.css' %}"/>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+</html>

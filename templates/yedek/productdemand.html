@@ -1,0 +1,24 @@
+{% extends 'layout2.html' %}
+{% load static %}
+<link href="{% static 'css/jumbotron.css' %}" rel="stylesheet">
+{% load crispy_forms_tags %}
+{% block body %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="jumbotron-billboard">
+  <div class="img"></div>
+  <div class="container">
+
+  <div class="testt">
+  <h3>Ürün Teklifi Talep Formu</h3>
+  <hr>  
+      <form method = "post" class="post-form">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <button type ="submit" class="custom-btn btn-3 center"><span>Talep Oluştur</span></button><br><br><br>
+      </form>
+    </div>
+</div>
+</div>
+</section>
+{% endblock body %}
